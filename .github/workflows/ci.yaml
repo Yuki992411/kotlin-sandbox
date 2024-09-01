@@ -39,6 +39,8 @@ jobs:
         run: ./gradlew test
 
   build-and-push:
+    permissions:
+      packages: write
     runs-on: ubuntu-latest
     needs: test
 
