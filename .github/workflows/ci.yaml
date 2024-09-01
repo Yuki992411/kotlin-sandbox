@@ -51,7 +51,7 @@ jobs:
         run: |
           REPO_OWNER_LOWER=$(echo ${{ github.repository_owner }} | tr '[:upper:]' '[:lower:]')
           BRANCH_NAME=$(echo ${{ github.ref_name }} | tr '[:upper:]' '[:lower:]')
-          COMMIT_ID=${{ github.sha }}
+          COMMIT_ID=$(echo ${{ github.sha }} | cut -c1-7)
           IMAGE_TAG="${BRANCH_NAME}-${COMMIT_ID}"
           IMAGE_NAME="ghcr.io/${REPO_OWNER_LOWER}/kotlin-sandbox:${IMAGE_TAG}"
           echo "IMAGE_NAME=${IMAGE_NAME}" >> $GITHUB_ENV
