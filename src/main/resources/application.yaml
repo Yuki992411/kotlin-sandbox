@@ -1,1 +1,9 @@
-spring.application.name=kotlin-sandbox
+spring:
+  application:
+    name: kotlin-sandbox
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: prometheus
