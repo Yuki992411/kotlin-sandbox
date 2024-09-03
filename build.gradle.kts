@@ -31,6 +31,7 @@ dependencies {
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
   implementation("org.springframework.boot:spring-boot-starter-actuator")
   runtimeOnly("io.micrometer:micrometer-registry-prometheus")
+  runtimeOnly("com.github.loki4j:loki-logback-appender:1.3.2")
 	compileOnly("org.projectlombok:lombok")
 	annotationProcessor("org.projectlombok:lombok")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
